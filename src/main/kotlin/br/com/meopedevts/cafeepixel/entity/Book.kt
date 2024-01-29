@@ -1,5 +1,6 @@
 package br.com.meopedevts.cafeepixel.entity
 
+import br.com.meopedevts.cafeepixel.dtos.CreateBookDTO
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -12,7 +13,7 @@ import jakarta.persistence.Table
 class Book(
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    val id: Long,
+    val id: Long = 0,
     @Column(nullable = false)
     val title: String,
     @Column(nullable = false)
